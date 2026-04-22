@@ -36,12 +36,12 @@ const Nav = () => {
     }, "-=0.3");
   }, []);
 
-  const handleMouseEnter = (e) => {
+  const handleMouseEnter = (e: React.MouseEvent<HTMLDivElement>) => {
     const line = e.currentTarget.querySelector('.nav-line');
     gsap.to(line, { width: '100%', left: '0%', duration: 0.3, ease: 'power2.inOut' });
   };
 
-  const handleMouseLeave = (e) => {
+  const handleMouseLeave = (e: React.MouseEvent<HTMLDivElement>) => {
     const line = e.currentTarget.querySelector('.nav-line');
     gsap.to(line, { width: '0%', left: '100%', duration: 0.3, ease: 'power2.inOut', onComplete: () => {
       gsap.set(line, { left: '0%' });

@@ -4,16 +4,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { ArrowUpFromDot, Sparkles,  MessageCircle } from "lucide-react";
 import gsap from "gsap";
 
-const GridOverlay = () => (
-  <svg className="absolute inset-0 w-full h-full pointer-events-none" xmlns="http://www.w3.org/2000/svg">
-    <defs>
-      <pattern id="tgs-grid" width="40" height="40" patternUnits="userSpaceOnUse">
-        <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(99,102,241,0.5)" strokeWidth="0.5" />
-      </pattern>
-    </defs>
-    <rect width="100%" height="100%" fill="url(#tgs-grid)" />
-  </svg>
-);
+
 
 export default function HeroSection() {
   const heroRef = useRef<HTMLDivElement>(null);
@@ -26,7 +17,8 @@ export default function HeroSection() {
 
   const suggestions = ["Trending reels this week", "Gen Z gaming", "IPL 2025 sentiment"];
 
-  useEffect(() => {
+  useEffect(
+    () => {
     if (!showTyping || !placeholderRef.current) return;
     const texts = ["Enter keyword...", "What's trending?", "Analyze sentiment...", "Find viral content..."];
     const tl = gsap.timeline({ repeat: -1 });
