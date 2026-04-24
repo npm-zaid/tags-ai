@@ -98,10 +98,10 @@ export default function HeroSection() {
       <div className="float-ig absolute right-[12%] top-[25%] drop-shadow-2xl z-20 drop-shadow-black/30">
         <img className="w-[15vw] sm:w-[8vw]" src="assets/youtube.png" alt="Youtube" />
       </div>
-      <div className="float-tw absolute left-[12%] bottom-[25%] drop-shadow-2xl drop-shadow-black/30 z-20">
+      <div className="float-tw absolute sm:block hidden left-[12%] bottom-[25%] drop-shadow-2xl drop-shadow-black/30 z-20">
         <img className="w-[15vw] sm:w-[8vw]" src="assets/trend.png" alt="Trend" />
       </div>
-      <div className="float-tt absolute right-[10%] bottom-[20%] z-20 drop-shadow-2xl drop-shadow-black/30">
+      <div className="float-tt absolute sm:block hidden right-[10%] bottom-[20%] z-20 drop-shadow-2xl drop-shadow-black/30">
         <img className="w-[12vw]" src="assets/search.png" alt="Search" />
       </div>
 
@@ -146,8 +146,8 @@ export default function HeroSection() {
                 />
               </div>
 
-              <div className="p-4 flex flex-col sm:flex-row items-center justify-between gap-4 border-t border-slate-100/50">
-                <div className="flex gap-2 flex-wrap">
+              <div className="p-4  flex  items-center sm:justify-between justify-end gap-4 border-t border-slate-100/50">
+                <div className="sm:flex hidden gap-2 flex-wrap">
                   {suggestions.map((s) => (
                     <button
                       key={s}
@@ -159,11 +159,11 @@ export default function HeroSection() {
                   ))}
                 </div>
 
-                <div className="flex items-center gap-3">
-                  <div className="flex items-center gap-2 bg-slate-900 px-4 py-2 rounded-full text-white shadow-lg">
+                <div className="flex items-center  gap-3">
+                  {/* <div className="flex items-center gap-2 bg-slate-900 px-4 py-2 rounded-full text-white shadow-lg">
                     <Sparkles size={14} className="text-red-500" />
                     <span className="mono-ui text-[10px] font-bold uppercase tracking-tighter">Youtube</span>
-                  </div>
+                  </div> */}
 
                   <button
                     disabled={!inputValue.trim()}

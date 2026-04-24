@@ -9,6 +9,8 @@ import Marquee from "@/components/home/Marquee";
 import YoutubeAds from "@/components/home/YoutubeAds";
 import YoutubeIllustration from "@/components/home/Youtubeillustration";
 import TrendingVideos from "@/components/home/Trendingvideos";
+import Contact from "@/components/home/Contact";
+import DataComparison from '@/components/home/DataComparison'
 
 const GridOverlay = () => (
   <svg className="absolute inset-0 w-full h-full pointer-events-none" xmlns="http://www.w3.org/2000/svg">
@@ -24,16 +26,22 @@ const GridOverlay = () => (
 
 export default function Home() {
   return (
-   <div className="bg-white relative">
+   <div className="bg-white relative overflow-hidden">
   
     <Hero/>
     <Marquee/>
     <Mission/>
+     <Beam/>
     <Dashboard/>
-    <Beam/>
+
+    
     <YoutubeAds/>
   
+    
+  
     <TrendingVideos/>
+   
+    <Contact/>
     
   
   

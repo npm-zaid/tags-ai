@@ -4,6 +4,7 @@ import React, { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { CheckCircle2, TrendingUp, Sparkles, Languages, BarChart3, PieChart } from 'lucide-react';
 import SectionIntro from '../common/SectionIntro';
+import Button from '../common/Button'; 
 
 const Mission = () => {
   const containerRef = useRef(null);
@@ -119,23 +120,7 @@ const Mission = () => {
           
        
         
-          <button
-            onClick={() => {window.location.href = '#get-started'}}
-            type="button"
-            className="relative h-14 px-8 pr-16 rounded-full bg-indigo-50 overflow-hidden text-indigo-900 font-bold text-base cursor-pointer group shadow-sm hover:shadow-indigo-100 transition-all"
-          >
-            {/* Expanding pill animation */}
-            <span className="absolute top-1 right-1 h-12 w-12 rounded-full bg-[#9186BB] flex items-center justify-center z-20 transition-all duration-500 ease-out group-hover:w-[calc(100%-8px)]">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" className="w-6 h-6 fill-white">
-                <path d="M800 512H160a32 32 0 0 1 0-64h640a32 32 0 1 1 0 64z" />
-                <path d="m786.752 512-265.408-265.344a32 32 0 0 1 45.312-45.312l288 288a32 32 0 0 1 0 45.312l-288 288a32 32 0 1 1-45.312-45.312L786.752 512z" />
-              </svg>
-            </span>
-
-            <span className="relative z-10 transition-colors duration-300 group-hover:text-white">
-              Analyze Trends Now
-            </span>
-          </button>
+           <Button href="#" color="#9186BB">Start Analyzing</Button>
         </div>
 
       </div>

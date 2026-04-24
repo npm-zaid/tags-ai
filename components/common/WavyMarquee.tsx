@@ -36,7 +36,7 @@ const WavyMarquee: React.FC = () => {
               d="M-550,59.58 S-183.15,209.58 0,209.58 S366.85,59.58 550,59.58 S916.85,209.58 1100,209.58 S1466.85,59.58 1650,59.58 S2016.85,209.58 2200,209.58 S2566.85,59.58 2750,59.58"
             />
           </defs>
-          <text className="text-[64px] font-medium uppercase fill-black">
+          <text className="text-[64px] font-medium uppercase fill-black font-plus-jakarta-sans">
             <textPath 
               ref={textPathRef} 
               href="#wavePath" 
@@ -44,7 +44,7 @@ const WavyMarquee: React.FC = () => {
             >
               {segments.map((_, i) => (
                 <tspan key={i} x={i * 648}>
-                  LIMITED EDITION 💎
+                 Tags is here🔥! 
                 </tspan>
               ))}
             </textPath>

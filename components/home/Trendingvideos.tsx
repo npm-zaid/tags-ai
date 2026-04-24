@@ -191,7 +191,7 @@ export default function TrendingVideos() {
   }
 
   return (
-    <section ref={sectionRef} className="relative bg-zinc-950 text-white overflow-hidden py-24 px-6 md:px-16">
+    <section ref={sectionRef} className="relative bg-zinc-950 text-white overflow-hidden py-24 px-6 ">
 
       {/* ── Background decorations ── */}
       <div className="pointer-events-none absolute inset-0 overflow-hidden">
@@ -226,12 +226,12 @@ export default function TrendingVideos() {
         <div ref={headlineRef} className="mb-6">
         
 
-          <div className="grid grid-cols-2 items-start  ">
+          <div className="grid sm:grid-cols-2 items-start  ">
             <div className=''>
               <div id="trend-eyebrow" className="inline-flex items-center gap-2.5 mb-5">
             <span ref={liveRef} className="w-2 h-2 rounded-full bg-red-500 shadow-[0_0_8px_rgba(239,68,68,0.8)]" />
             <span className="text-red-400 text-xs font-black uppercase tracking-[0.2em]">Live Trending</span>
-            <span className="text-zinc-600 text-xs">— updated 2 min ago</span>
+            {/* <span className="text-zinc-600 text-xs">— updated 2 min ago</span> */}
           </div>
               <h2
                 id="trend-h1"
@@ -253,7 +253,7 @@ export default function TrendingVideos() {
               </p>
             </div>
 
-           <div className='relative '>
+           <div className='sm:block relative hidden'>
             <img src="/assets/you.png" alt="" className='w-[30vw] m-auto' />
            </div>
 

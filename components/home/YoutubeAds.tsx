@@ -49,7 +49,7 @@ export default function YoutubeAds() {
   return (
     <section
       ref={sectionRef}
-      className="relative min-h-screen  px-6 md:px-16 xl:px-24 py-24  "
+      className="relative min-h-screen  px-6 sm:px-12 py-24  "
     >
       {/* Background noise texture + blobs */}
       <div className="pointer-events-none absolute inset-0">
@@ -123,7 +123,7 @@ export default function YoutubeAds() {
             <img
               src="https://lh3.googleusercontent.com/fZt-M8ql2JnNNO2SfXgr3k4bA3X7fkiR3xyeCYZ8YRcmtyj5ibLSPhs-oXd1RmEEa3Qk=w895"
               alt="YouTube ad placements"
-              className="w-[50vw]"
+              className="sm:w-[50vw]"
             />
           
           </div>
@@ -131,7 +131,7 @@ export default function YoutubeAds() {
           {/* Floating stat pill */}
           <div
             ref={floatRef}
-            className="absolute -right-16 z-40 bottom-6 bg-white border border-zinc-200 rounded-2xl px-4 py-3 shadow-xl flex items-center gap-3"
+            className="absolute -right-8 z-40 bottom-4 bg-white border border-red-500/50 rounded-2xl px-2 py-3 shadow-xl flex items-center gap-3"
           >
             <div className="w-8 h-8 rounded-xl bg-red-50 flex items-center justify-center">
               <BarChart2 size={16} className="text-red-600" />
@@ -155,7 +155,7 @@ export default function YoutubeAds() {
 <div  className=" w-full h-[3px] rounded-full bg-gradient-to-r from-transparent to-red-500 mt-14"></div>
 
          {/* Feature Grid */}
-       <div ref={featuresRef} className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-[10vh]">
+       <div ref={featuresRef} className="grid grid-cols-1 sm:grid-cols-4 gap-4 mt-[10vh]">
             {features.map(({ icon: Icon, title, desc, id }) => (
               <div
                 key={id}

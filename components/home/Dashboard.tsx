@@ -10,6 +10,9 @@ import {
  Users, BarChart2,
 } from 'lucide-react';
 
+
+import Link from 'next/link';
+
 // ─── Colors ──────────────────────────────────────────────────────────────────
 const C = {
   purple: '#9385BF',
@@ -207,18 +210,18 @@ const TagsDashboard = () => {
                 <span style={{ color: C.purple }}>Place smarter.</span>
               </h3>
               <div
-                className="flex items-center gap-3 bg-white border p-2 rounded-full w-fit pl-6 transition-all"
+                className="flex items-center gap-3  bg-white border p-2 rounded-full w-fit pl-6 transition-all"
                 style={{ borderColor: C.border, boxShadow: '0 2px 12px rgba(0,0,0,0.06)' }}
               >
              
                 <input
                   onKeyDown={(e) => { if (e.key === "Enter") router.push("/ai-search"); }}
-                  className="bg-transparent border-none outline-none font-medium w-1/2 sm:w-64"
+                  className="bg-transparent border-none outline-none font-medium sm:w-64 w-full"
                   style={{ color: C.dark }}
                   placeholder="e.g. Tech reviews in Hindi…"
                 />
 
-                   <div
+                   <Link href="/ai-search"
                   className="p-4 rounded-full shadow-lg text-white"
                   style={{ background: C.purple, boxShadow: `0 4px 16px ${C.purple}50` }}
                 >
@@ -226,8 +229,10 @@ const TagsDashboard = () => {
                 <path d="M800 512H160a32 32 0 0 1 0-64h640a32 32 0 1 1 0 64z" />
                 <path d="m786.752 512-265.408-265.344a32 32 0 0 1 45.312-45.312l288 288a32 32 0 0 1 0 45.312l-288 288a32 32 0 1 1-45.312-45.312L786.752 512z" />
               </svg>
-                </div>
+                </Link>
+
               </div>
+
             </div>
           </div>
 
@@ -305,7 +310,7 @@ const TagsDashboard = () => {
                 <TrendingUp size={20} />
               </div>
               <div>
-                <h3 className="text-xl font-black tracking-tighter" style={{ color: C.dark }}>Trending</h3>
+                <h3 className="text-xl font-semibold tracking-tighter" style={{ color: C.dark }}>Trending</h3>
                 <p className="text-[10px] font-bold uppercase tracking-widest" style={{ color: C.blue }}>
                   Right Now
                 </p>
@@ -387,7 +392,7 @@ const TagsDashboard = () => {
                 <Users size={20} />
               </div>
               <div>
-                <h3 className="text-xl font-black tracking-tighter" style={{ color: C.dark }}>Top Channels</h3>
+                <h3 className="text-xl font-semibold tracking-tighter" style={{ color: C.dark }}>Top Channels</h3>
                 <p className="text-[10px] font-bold uppercase tracking-widest" style={{ color: C.green }}>
                   By Influence
                 </p>
@@ -447,14 +452,14 @@ const TagsDashboard = () => {
           <div className="relative z-10 mb-8 flex items-center justify-between">
             <div className="flex gap-3 items-center">
               <div
-                className="w-12 h-12 bg-white border rounded-2xl flex items-center justify-center shadow-sm"
+                className="p-3 bg-white border rounded-2xl flex items-center justify-center shadow-sm"
                 style={{ borderColor: C.border }}
               >
                 <BarChart2 size={20} style={{ color: C.orange }} />
               </div>
               <div>
                 <h3
-                  className="text-2xl font-black tracking-tighter"
+                  className="text-2xl font-semibold  tracking-tighter"
                   style={{  color: C.dark }}
                 >
                   What Tags{" "}
@@ -465,12 +470,8 @@ const TagsDashboard = () => {
                 </p>
               </div>
             </div>
-            <button
-              className="flex items-center gap-2 text-xs font-bold transition-colors shrink-0"
-              style={{ color: C.orange }}
-            >
-              Explore all <ArrowUpRight size={14} />
-            </button>
+         
+           
           </div>
 
           <div

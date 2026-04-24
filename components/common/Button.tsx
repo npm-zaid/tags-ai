@@ -53,9 +53,9 @@ const isExternal = /^https?:\/\/|^\/\//i.test(href);
       }}
     >
       {/* TEXT */}
-      <span className="sm:text-[1.4vw] text-[4vw] font-bold tracking-[1px]">
+      <h1 className=" inline sm:text-[1.4vw] text-[4vw] font-bold tracking-[1px]">
         {children}
-      </span>
+      </h1>
 
       {/* ICON */}
       <span className="pt-1">
